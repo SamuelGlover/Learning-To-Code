@@ -505,7 +505,7 @@ print(i)
 #this would print numbers 1-9
 
 #3 is start stop & step, and step denotes increments every time.
-#step defaults to one but can be incremented by a negative number.ab
+#step defaults to one but can be incremented by a negative number
 
 for i in range(10,-1, -2)
 print(i)
