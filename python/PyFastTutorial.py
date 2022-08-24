@@ -5,17 +5,18 @@
 #py is very easy to learn, versatile, and easy to write
 #Core advantage(s): simple, ez syntax, fast dev
 
+______________________________________________________________
 #Core Data Types:
 #Int- Any whole number with no decimal
 #Float- Any number with a decimal
 #String- Any quoted text of a sequence of characters
 #-Single vs double quotes doesn't matter, just be consistent
 #to embed quotes use opposite quote type to wrap
-# Boolean- one of two values. true or false, 1 or 0
+#Bool or Boolean- one of two values. true or false, 1 or 0
 
-#------------------------------------------------------------
 #These are your 4 core data types
 
+_______________________________________________________________
 #Output & Printing
 
 print("Hello World")
