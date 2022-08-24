@@ -18,14 +18,14 @@
 
 #Output & Printing
 
-Print("Hello World")
-#Print is the simple function to output to a console on run
+print("Hello World")
+#print is the simple function to output to a console on run
 #Hello World is the string
 #you can only print data types.
 #You can pass arguments into Print functions
 
-Print("Hello", "end", 87, False, end="\n" )
-Print("Hello")
+print("Hello", "end", 87, False, end="\n" )
+print("Hello")
 
 #"\n" moves you to the next line
 
