@@ -298,3 +298,218 @@ ________________________________________________________________________________
 #IF/ELSE?ELIF statements!!!
 
 #here's the fun shit!
+
+#Let's start with if and else
+if condition:
+    Print("...")
+    Print("...")
+else:
+    Print("ew.")
+
+#if something, then do this basically, if it's anything else, do this.
+#else can only come after if.
+#pretty self explanatory.
+
+#what if you need to check multiple things though?
+
+#time for ELIF statements.abs(
+
+x = input("Name: ")
+
+if x -- "Sam":
+    Print("Hi Sam!")
+    Print("I think ur awesome!")
+elif x == "Jim":
+    Print("Sup Jim")
+else:
+    Print("ew.")
+
+#you can only have one if & one else, but as many elif statments as you need.
+#elif must come after if and before else.
+#you don't have to have an else statement to have an elif btw
+#you can nest ifs inside of ifs and such however indentation becomes paramount,
+#since that helps our python machine determine what to print if the statement is true
+
+____________________________________________________________________________________________________
+
+#Let's talk Collections.
+
+#What is a collection?
+#A: an ordered or unordered group of elements.
+
+#Let's talk two types of collections real quick:
+#1)Lists
+#2)Tuples
+
+#LISTS!!!
+
+#Lists are denoted by square brackets with elements within
+#Elements are simply some form of data type
+
+x = [4, true, "hi"]
+
+#please note that unlike many other languages, the elements don't have to be the same data type in these lists
+#We put integers, strings, and values.
+
+#Lists store bunches of elements in an ordered collection.
+#The order in which we enter things actually matters and is maintained in lists.
+
+#How do we access lists, how do we deal with lists, and what do we do with them?
+ 
+ #you can define a list by opening square brackets and defining an element.
+ #an empty list can be created by leaving the square brackets empty.
+
+ #to access a list you can use functions. lets start with Len
+
+ #len will tell us the length of the list, however it also works on strings and a couple other things.
+
+x = [4, true, "hi"]
+y = "hi"
+print(len(x))
+
+#and it would tell you the list had a length of 3
+
+#You also can append to lists, let's look at this
+
+x = [4, true, "hi"]
+y = "hi"
+x.append("hello")
+print(len(x))
+
+#This adds the string "hello" to the end of the list
+#if you printed x here you would get "4, true, hi, hello" in order.
+
+#extend is next
+
+x = [4, true, "hi"]
+y = "hi"
+x.append("hello")
+x.extend([4,5,6,7,8,9])
+print(len(x))
+
+#extend would look through the list you inputted and append each piece of the list to the end of your existing list
+
+#how would you remove something?
+#By popping it off obviously!
+#pop removes and returns the last element of a list
+
+x = [4, true, "hi"]
+y = "hi"
+x.append("hello")
+x.extend([4,5,6,7,8,9])
+print(len(x))
+print(x.pop)
+
+#another argument of pop the index of the element we want to remove.
+#every number in a list is numbered with a number called it's index.
+#the first position in an list is zero
+
+
+x = [4, true, "hi"]
+y = "hi"
+x.append("hello")
+x.extend([4,5,6,7,8,9])
+print(len(x))
+print(x.pop(0))
+
+#this would remove the first element from the list, in this case, the integer 4
+
+#what if we just want to access our list?
+# We can access our list like this:
+
+x = [4, true, "hi"]
+y = "hi"
+x.append("hello")
+x.extend([4,5,6,7,8,9])
+print(len(x))
+print(x[1])
+
+#instead of popping a value off, we now print the index within the square brackets,
+#in this case, it's the value "true"
+
+#we can also change values:
+
+x = [4, true, "hi"]
+y = "hi"
+x[1] = False
+x.append("hello")
+x.extend([4,5,6,7,8,9])
+print(len(x))
+print(x[1])
+
+#now when we print, we'll end up seeing that instead of the value "true", 
+#the list has been changed and that the value there is now "False"
+
+#why can we do this?
+
+#lists are mutable: that means x doesn't store a copy to the list, 
+#but instead a reference to a list
+
+#this means all elements can be changed.
+
+#to make a copy of the list you'd need 
+
+y = x[:]
+
+#the x[:] is important here, we'll talk about how that works in a bit,
+#but right now whats important is that because you made a copy, the change won't apply to the other list.
+
+
+#TUPLE TIME!
+
+#tuples work the same as lists;
+#except they use round brackets "()", and are immutable.
+#You can't append, change or remove elements of tuples.
+#once it's been defined, to make changes we have to redefine it.
+#You will get errors if you try to treat it as mutable.
+
+____________________________________________________________________________________________________
+
+#FOR LOOPS!!
+
+#For loops allow you iterate a set amount of times.
+#a While loop however runs an indefined number of times based on a condition.
+
+#we know how many times a for loop will run relatively.
+
+#Let's focus on the for loop real quick
+
+#Here's a basic for loop:
+
+for i in range(10)
+print(i)
+
+#There's a lot of stuff happening here right??? let's talk about it.
+
+#This would print 0-9, 10 numbers
+#i is considered a "counter variable" or an "iterator"
+#range is a function that creates a collection of numbers based on the inputs we give it.
+
+# so for some variable, in some range, we print a certain thing
+
+#let's talk inputs we can give to range.
+
+start, stop, step
+
+#we're allowed to put up to three arguments inside a range function.
+
+#Where do we start, where do we step, then where do we stop?
+
+#if there's only one argument by default it will be a stop argument. 
+#You will start at 0 and go to the number in range, but not include that number.
+#two arguments is start and stop:
+
+for i in range(1,10)
+print(i)
+
+#this would print numbers 1-9
+
+#3 is start stop & step, and step denotes increments every time.
+#step defaults to one but can be incremented by a negative number.ab
+
+for i in range(10,-1, -2)
+print(i)
+
+#this would print numbers in descending order from 10, so 10, 8, 6, 4, 2, 0
+
+#making sense yet?
