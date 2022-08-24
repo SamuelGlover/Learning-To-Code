@@ -1,12 +1,13 @@
-#Python as fast as possible by tech with tim on youtube
+#Notes on Python as fast as possible by tech with tim on youtube
 #Link: https://youtu.be/VchuKL44s6E
 
 #Python is used for: general purpose
-#py is very easy to learn, versatile, and easy to write
+#python is very easy to learn, versatile, and easy to write
 #Core advantage(s): simple, ez syntax, fast dev
 
 ______________________________________________________________
 #Core Data Types:
+
 #Int- Any whole number with no decimal
 #Float- Any number with a decimal
 #String- Any quoted text of a sequence of characters
@@ -177,8 +178,10 @@ print(hello.upper)
 #There are more of these, but these are basic string methods. They chain btw.
 
 hello = "hello World".upper()
-print(hello.lower().count("o")
-_____________________________________________________________________________________
+print(hello.lower().count("o"))
+
+__________________________________________________________________________________________________
+
 
 #String Multiplication & Addition!
 
@@ -193,12 +196,12 @@ ________________________________________________________________________________
 
 #Exe: Is X equal to Y? Yes or No, True or false.(Boolean)
 
-== -checks for equality
-!= -checks for inequality
-<= -less than or equal to
->= -greater than or equal to
-<  -less than
->  -greater than
+# == -checks for equality
+# != -checks for inequality
+# <= -less than or equal to
+# >= -greater than or equal to
+# <  -less than
+# >  -greater than
 
 #these are the core conditional operators, there are more, but this is enough to cover for now
 
