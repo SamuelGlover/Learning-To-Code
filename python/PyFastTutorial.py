@@ -295,7 +295,7 @@ print(not(result4))
 
 ____________________________________________________________________________________________________
 
-#IF/ELSE?ELIF statements!!!
+#IF/ELSE/ELIF statements!!!
 
 #here's the fun shit!
 
@@ -316,7 +316,7 @@ else:
 
 x = input("Name: ")
 
-if x -- "Sam":
+if x == "Sam":
     Print("Hi Sam!")
     Print("I think ur awesome!")
 elif x == "Jim":
@@ -514,3 +514,39 @@ print(i)
 
 #making sense yet?
 
+#lets loop through a list next
+
+for i in [3,4,5,6,7,88]
+print(i)
+
+#this will step through everything in this list.
+
+#Now let's try keeping track of an index instead
+
+x = [3,4,42,3,2,4]
+
+for i in range(len(x))
+print(x[i])
+
+#This will go up to but not include the last index of x, that means this will print 6.
+#We can make life simpler and. do this another way
+
+x = [3,4,42,3,2,4]
+
+for i in enumerate(x)
+    print(i, element)
+
+#enumerate will create indexes and values for all the elements in our list.
+#we print all the indexes with i, and then all the elements with element.
+
+________________________________________________________________________________________________
+
+#WHILE LOOPS:
+
+x = [3,4,42,3,2,4]
+
+i = 0
+while i <10 
+    print("run")
+    i += 1
+    i -= 2
