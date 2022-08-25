@@ -549,4 +549,79 @@ i = 0
 while i <10 
     print("run")
     i += 1
-    i -= 2
+    i *= 2
+
+#lets talk break statements
+
+
+i = 0
+while true: 
+    print("run")
+    i += 1
+    if i == 10:
+        break
+ ________________________________________________________________________________________________
+
+#SLICE OPERATOR
+
+print(sliced)
+
+#take a slice of a collection and do something with it.
+
+sliced = [start:stop:step]
+
+print (sliced)
+
+#start at an index, go to a index but don't include it, then step by a value.
+#if we only include a colon and a number, it's saying stop at that index
+#empty brackets denote a beginning or an end
+
+sliced = x[::-1]
+print(sliced)
+
+#this reverses a list quickly. says start at the beginning, stop at the end, and step by -1
+
+#this covers the basics of slice operators, they work on tuples.
+
+________________________________________________________________________________________________
+
+#Sets
+
+#sets are an unordered, but unique collection of elements.
+#there can be no element duplicates in a set
+#order/frequency isn't kept track of
+#seeing if something is there or now.
+#sets can be done fast.
+
+#lookups, removals, and additions.
+#in lists, this is probably the fastest way to remove an element.
+
+#we can remove the first element from a list, you need to shift all the other positions
+#but with sets you don't have to preform a bunch of other operations.
+#used for situations where you don't care about frequency or order.
+
+#written like this:
+
+x = set()
+s = {4, 32, 2, 2}
+
+#sets are actually denoted by {} but using them for empty sets will create a dictionary which you don't want right now.
+#instead make sure you use set()
+
+#remember, set tracks presence, not order or frequency.
+
+s.add() #adds to a set
+s.remove() #removes from set
+
+print(4 in s) #checks for something in a set and gives a boolean (true or false)
+
+#this happens in constant time which is incredibly fast
+
+#multiple sets can be done as s and s2 and s3 and so on...
+
+#a few other operations can be done in sets
+
+print(s.union)
+print(s.intersection)
+
+and so on
