@@ -619,9 +619,138 @@ print(4 in s) #checks for something in a set and gives a boolean (true or false)
 
 #multiple sets can be done as s and s2 and s3 and so on...
 
-#a few other operations can be done in sets
+#a few other operations can be done in sets, here's a couple examples
 
 print(s.union)
 print(s.intersection)
 
 and so on
+
+___________________________________________________________________________________________________________________________
+
+#DICTS!!!!
+
+#A dict is basically a key value pair, similar to hash tables and maps from other languages
+
+x = {"key" : 4 }
+
+#Brackets -> some key -> colon -> some value for correspondence.
+#Has to be a valid data type, could be a list or a single value of course.
+#now how do we access or create new key value pairs????
+
+print(x["key"])
+
+#to add a new key looks simple
+
+x["key2"] = 5
+
+x[2] = 8
+
+#The values in keys do NOT have to be the same data type
+#dicts also work on hash, meaning its almost in constant-time. 
+#there can be hash collision sometimes but we should study that later
+#Useful things you can do in dicts???
+
+print(list(x.values)) #list returns a different data type 
+print("key" in x) #See if there's some key in x, true or false return
+print(list(x.keys())) #list of keys
+del x["key"] #self explanatory and deletes a key
+
+for key, value in x.items():
+    print(key, value)
+#This is to create a loop that will return all keys and values in x.
+
+#EZ dict tutorial
+
+___________________________________________________________________________________________________________________________
+
+#NOW. TIME TO TALK COMPREHESIONS!
+
+#This is loved or hated depending on the crowd, but
+#Python is one of the few languages that actually is capable of this.
+#Comprehensions are one line initializations of a list, tuple, dict, and other things
+#So how do we do it???
+
+x = [x for x in range(5)]
+print(x)
+
+#and we should get ascending numbers to 5 from that
+
+#WTF DID WE JUST WRITE THO LMAO????
+
+#well
+#Define a for loop inside of a list, and whatever is on the left of the "for" will be added to the list
+
+x = [x + 5 for x in range(5)]
+print(x)
+
+#Would return 5, 6, 7, 8, 9, 10
+
+#lets get complex
+
+x = [0 for x in range(5)]
+print(x)
+
+#returns a list of 0's
+#Deeper now:
+
+x = [[0 for x in range(100)] for x in range(5)]
+print(x)
+
+#returns 5 lists of 100 zeros
+#farther down the rabbit hole
+
+x = [i for i in range(100) if i % 5 == 0]
+print(x)
+
+#this right here
+#this shit right here?
+#if i is divisible by 5 then we add it into the list and we get all the incriments of 5
+#we can make this a dict or a tuple and a set too btw.
+
+#but tuples will be done a little different.
+#if you try to return the previous line of code it'll return a generator object, which is a bit advanced so
+#lets talk about that later after an independent study
+
+#Instead of this:
+x = (i for i in range(100) if i % 5 == 0)
+print(x)
+
+#lets try this:
+x = tuple(i for i in range(100) if i % 5 == 0)
+print(x)
+
+#This is known as the tuple constructor and will return us that tuple instead of the generator object
+
+
+___________________________________________________________________________________________________________________________
+
+#FUNCTIONS!!!!
+
+#to talk functions we're going to use the:
+
+def
+
+#keyword
+
+def func():
+    print('run')
+
+#functions are the same as variables as far as naming conventions.
+#anything in parenthesis will be positional parameters but you CAN leave the inside blank
+#You can define functions inside of functions btw.
+#you can define many functions
+
+#functions are considered objects so they can even be returned.
+
+#adding arguments is important too
+
+def func():
+    print("run", x, y)
+    return x * y, x/y
+
+print(func(5, 6))
+
+#so what does this do? we evaluated what we inputted and it would return thirty (5x6)
+#when you return multiple things from a function they come back as tuples
+#Lets unpack that tuple we'd get.
