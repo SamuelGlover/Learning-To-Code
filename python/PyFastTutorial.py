@@ -751,6 +751,25 @@ def func():
 
 print(func(5, 6))
 
-#so what does this do? we evaluated what we inputted and it would return thirty (5x6)
+#so what does this do? we evaluated what we inputted and it would return thirty (5x6) or .83334 (5/6)
 #when you return multiple things from a function they come back as tuples
 #Lets unpack that tuple we'd get.
+
+#Seperate it like so:
+
+r1, r2 = func(5,6)
+print(r1, r2)
+
+#much cleaner than indexing
+#Takes values and seperates them into r1 & r2 variables
+#The print will return the r1 as 30 and r2 as .83334
+
+#this covers the basics of functions
+
+#to do an optional parameter you will want to do like z=none
+
+def func(x, y, z=None):
+    print("run", x, y, z)
+    return x * y, x/y
+___________________________________________________________________________________________________________________________
+
