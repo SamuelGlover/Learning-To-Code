@@ -773,3 +773,27 @@ def func(x, y, z=None):
     return x * y, x/y
 ___________________________________________________________________________________________________________________________
 
+#UNPACK OPERATOR/ *ARGS & **KWARGS
+
+def func(x):
+    def func2():
+        print(x)
+
+        return func2
+    
+print(func(3)())
+
+    #this is valid, functions are objects. They may be passed around just like variables
+    #This is an important concept for this section.
+
+
+#lets look at *args and **kwargs
+#we have to start by sholwing you the unpack operator though.
+#lets show an example below:
+
+def func(*args, **kwargs):
+    pass
+
+x=[1,23,234545,3232]
+
+    
