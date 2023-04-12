@@ -791,9 +791,13 @@ print(func(3)())
 #we have to start by sholwing you the unpack operator though.
 #lets show an example below:
 
+#Btw 
+func(*x)    #this is the unpack operator
+#this will unpack the list and pass it as arguments to the function
+
+
 def func(*args, **kwargs):
     pass
 
 x=[1,23,234545,3232]
 
-    

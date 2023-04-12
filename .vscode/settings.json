@@ -2,5 +2,8 @@
     "cSpell.ignoreWords": [
         "__________________________________________________________________________________________________"
     ],
-    "easycode.model": "gpt-3.5-turbo"
+    "easycode.model": "gpt-3.5-turbo",
+    "workbench.preferredHighContrastColorTheme": "Monokai Dimmed",
+    "workbench.preferredDarkColorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Monokai Dimmed"
 }
