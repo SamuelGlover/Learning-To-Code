@@ -766,14 +766,14 @@ print(r1, r2)
 
 #this covers the basics of functions
 
-#to do an optional parameter you will want to do like z=none
+#to do an optional parameter you will want to do like z=none, you may call this if you want to but it's not required
 
 def func(x, y, z=None):
     print("run", x, y, z)
     return x * y, x/y
 ___________________________________________________________________________________________________________________________
 
-#UNPACK OPERATOR/ *ARGS & **KWARGS
+#UNPACK OPERATOR/ *ARGS (Arguments) & **KWARGS (Keyword Arguments)
 
 def func(x):
     def func2():
@@ -784,6 +784,11 @@ def func(x):
 print(func(3)())
 
     #this is valid, functions are objects. They may be passed around just like variables
+    #you can call them with the above return command by the above method. you may also set it equal to x and call x to get the same thing
+
+    x = func(3)
+
+    #these are the same.
     #This is an important concept for this section.
 
 
@@ -792,12 +797,150 @@ print(func(3)())
 #lets show an example below:
 
 #Btw 
-func(*x)    #this is the unpack operator
-#this will unpack the list and pass it as arguments to the function
+func(*x)    #this is the unpack operator, it seperates all elements individually from a list
+            #this will unpack the list and pass it as arguments to the function
 
 
 def func(*args, **kwargs):
     pass
 
 x=[1,23,234545,3232]
+print(*X)    #prints things seperated by spaces as if they were individual
+print(x,y)   #
 
+ #lets try a different example with a bunch of pairs we want to pass as functions:
+
+ def func(x,y):
+    print(x,y)
+
+pairs = [(1,2), (3,4)]   #lets make a for loop out of this. wrong way first:
+
+for pair in pairs:
+    func(pair[0], pair[1])
+
+#THIS WILL WORK, but this isn't the pythonic way to do this. it'd be wrong from a python perspective. Here's the "RIGHT" way:
+
+for pair in pairs:
+    func(*pair)     #This takes 1,2 and 3,4, unpacks them seperately, and passes them as arguments to functions. this makes unpack useful
+                    #Fun fact this works with dicts
+
+#In dicts you would use Two *'s instead of one. That's how it works with dicts.
+#Ex:
+
+for pair in pairs:
+    func(**{'x': 2, 'y': 4})
+
+#it's a lil more complicated but lists and tuples use one *, dicts use two
+#Order doesn't matter here as long as the arguments are named as the keys, it still works
+
+#If you don't know how many args and kwargs you want to accept, here's what you can do:
+
+def func(*args, **kwargs)
+    print(args, kwargs)
+
+func(1, 2, 3, 4, 5, one=0, two=1)
+
+#if you print this you get a tuple with all args and kwargs
+#if you want to use any of these, you have to unpack them, like this:
+
+print(*args) #This will work
+print(**kwargs) #this won't because of 'one', it'll be an error as invalid argument for print
+
+#These are the basics, figure out the more complex stuff
+
+_______________________________________________________________________________________________________________________________________________
+
+#DEFINING SCOPES AND GLOBALS
+
+x = 'tim'
+
+def func(name):
+    x = name
+
+print(x)
+func('changed')
+print(x)
+
+#This won't work when you try to call it
+
+#The x variable is local, its within the scope of the function and can't be used, accessed, or changed from the outside,
+#you may be able to access it, but you can't CHANGE it from the outside. To do so you have to make the variable GLOBAL like so:
+
+def func(name):
+    global X
+    x = name
+
+print(x)
+func('changed')
+print(x)
+
+#this will work when you attempt call it
+
+#ITS IMPORTANT TO NOTE TO NEVER, EVER, global anything unless it's absolutely necessary. this is bad. don't be a bad python programmer. please. 
+#it's upsetting to see. 
+#There are cases where it's necessary but it's quite rare, just showing because it's possible.
+
+_______________________________________________________________________________________________________________________________________________
+
+#RAISE EXCEPTION
+
+raise Exception('Bad')
+
+#this is useful for object oriented programming since it's a base class
+#you can also raise any error with an explanation with a string inside brackets
+#now how do we handle these?
+
+_______________________________________________________________________________________________________________________________________________
+
+#HANDLING EXCEPTIONS
+
+try:
+    x = 7 / 0
+except: #Any exception can be caught here
+    print(e)
+
+#These are try and except blocks, without them a program would crash when an exception is reached
+#This catches exceptions to stop a program from crashing when an error is produced.
+#Finally blocks run no matter what, you usually put cleanup type operations inside here
+
+finally:
+    print('finally')
+
+_______________________________________________________________________________________________________________________________________________
+
+#LAMBDAS
+
+#one line anonymous functions
+#not really a named function, you don't use def with lambdas
+#Ex:
+
+x = lambda x: x + 5
+
+print(x(2))
+
+#This isn't the ideal way to utilize a lambda, this is just for explanatory purposes.
+#Let's look at how they're useful:
+
+_______________________________________________________________________________________________________________________________________________
+
+#MAPS AND FUNCTIONS
+
+#You can utilize lambdas here
+#to explain how lets start by making a list
+
+x = [1,2,4,5,5,3,3,51,215,2,1,23,123,4]
+
+mp = map(lambda i: x+2, x) 
+print(list(mp))
+
+#you can use map here by using mp and setting it equal to the map of a function.
+#here we make that function a lambda of i
+#this maps everything in the list to the lambda function, applies it to every element of x, then adds the result to a new list
+#Then of course prints it
+
+#you can make this more complicated ofc, but you get the point.
+
+#let's talk filter now.
+
+mp = filter(lambda i: x+2, x) 
+print(list(mp))
