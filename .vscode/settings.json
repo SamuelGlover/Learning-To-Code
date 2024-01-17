@@ -5,7 +5,7 @@
     "easycode.model": "gpt-3.5-turbo",
     "workbench.preferredHighContrastColorTheme": "Monokai Dimmed",
     "workbench.preferredDarkColorTheme": "Monokai Dimmed",
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Catppuccin Noctis Mocha",
     "workbench.preferredHighContrastLightColorTheme": "Monokai Dimmed",
     "genieai.enableConversationHistory": true
 }
