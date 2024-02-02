@@ -978,3 +978,7 @@ x = f'hello{6 + 3} {sam} {33 + 5}'
 print(f'hello{sam}')
 
 #will print hello 99
+
+#OBJECT ORIENTED PROGRAMMiNG NEXT
+#EXPERT LEVEL PY FEATURES
+#RESOURCES IN HIS DESCRIPTION TO LEARN THESE TOO
