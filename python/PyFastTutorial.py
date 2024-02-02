@@ -541,7 +541,7 @@ for i in enumerate(x)
 
 ________________________________________________________________________________________________
 
-#WHILE LOOPS:
+#WHILE LOOPS: whatever is indented will run while the condition is true
 
 x = [3,4,42,3,2,4]
 
@@ -568,7 +568,7 @@ print(sliced)
 
 #take a slice of a collection and do something with it.
 
-sliced = [start:stop:step]
+sliced = x[start:stop:step]
 
 print (sliced)
 
@@ -579,6 +579,7 @@ print (sliced)
 sliced = x[::-1]
 print(sliced)
 
+#8,7,6,5,4,3,2,1 is the resulting output if the list starts at 1 and ends at 8
 #this reverses a list quickly. says start at the beginning, stop at the end, and step by -1
 
 #this covers the basics of slice operators, they work on tuples.
@@ -852,7 +853,7 @@ ________________________________________________________________________________
 
 #DEFINING SCOPES AND GLOBALS
 
-x = 'tim'
+x = 'sam'
 
 def func(name):
     x = name
@@ -896,7 +897,7 @@ ________________________________________________________________________________
 
 try:
     x = 7 / 0
-except: #Any exception can be caught here
+except Exception as e: #Any exception can be caught here
     print(e)
 
 #These are try and except blocks, without them a program would crash when an exception is reached
@@ -930,7 +931,7 @@ ________________________________________________________________________________
 
 x = [1,2,4,5,5,3,3,51,215,2,1,23,123,4]
 
-mp = map(lambda i: x+2, x) 
+mp = map(lambda i: i + 2, x) 
 print(list(mp))
 
 #you can use map here by using mp and setting it equal to the map of a function.
@@ -942,5 +943,38 @@ print(list(mp))
 
 #let's talk filter now.
 
-mp = filter(lambda i: x+2, x) 
+mp = filter(lambda i: i + 2, x) 
 print(list(mp))
+
+#filter works a little differently.
+#Instead of returning value, returns true or false
+#Tells whether or not to include item in final filtered list/object
+#lambda returns true or false based on the value of an item
+#you CAN just define it as a function, and it would look like this:
+
+def func(i)
+    i = i * 3
+    return i % 2 == 0
+
+mp = filter(func, x) 
+print(list(mp))
+
+#But this is complicated, a lambda is actually more useful and efficient here
+#If you don't want to define the function anywhere but in map statement, use lambda instead.
+#Like this:
+
+mp = filter(lambda i: i % 2 == 0, x) 
+print(list(mp))
+
+_______________________________________________________________________________________________________________________________________________
+
+#F STRINGS:
+
+#F strings are new in python 3.6
+#new way to manipulate/ create strings
+
+sam = 99
+x = f'hello{6 + 3} {sam} {33 + 5}'
+print(f'hello{sam}')
+
+#will print hello 99
