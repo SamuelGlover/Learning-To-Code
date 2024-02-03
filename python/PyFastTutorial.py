@@ -979,6 +979,18 @@ print(f'hello{sam}')
 
 #will print hello 99
 
-#OBJECT ORIENTED PROGRAMMiNG NEXT
-#EXPERT LEVEL PY FEATURES
+_______________________________________________________________________________________________________________________________________________
+
+
+#CONGRATULATIONS YOU MADE IT TO THE END!!
+#Hurrah!!
+
+#WHAT'S NEXT??
+
+#NOW THAT YOU'VE GOT THE BASICS DOWN HERE ARE MORE THINGS YOU CAN DO TO UNDERSTAND HOW TO ACTUALLY USE PYTHON:
+
+
+#1. OBJECT ORIENTED PROGRAMMiNG
+#2. EXPERT LEVEL PY FEATURES
+
 #RESOURCES IN HIS DESCRIPTION TO LEARN THESE TOO
