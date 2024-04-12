@@ -9,10 +9,13 @@ ______________________________________________________________
 #Core Data Types:
 
 #Int- Any whole number with no decimal
+
 #Float- Any number with a decimal
+
 #String- Any quoted text of a sequence of characters
 #-Single vs double quotes doesn't matter, just be consistent
-#to embed quotes use opposite quote type to wrap
+#-to embed quotes use opposite quote type to wrap
+
 #Bool or Boolean- one of two values. true or false, 1 or 0
 
 #These are your 4 core data types
